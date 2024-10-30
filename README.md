@@ -27,4 +27,10 @@ Public Store é um projeto voltado para simular o cadastro e a visualização de
 - *Styled Components*: Utilizado para estilização dos componentes de forma modular.
 - *React Router*: Para navegação entre as páginas do projeto.
 
-😎❤️
+## Dicas
+- *404 not found*: O servidor do vercel pode ter alguns problemas com as rotas da aplicação. Entao, vai ser comum encontrar um erro 404 aqui e ali. Caso isso aconteça volte pra pagina home e recarregue a pagina.
+- *Cadastro de Produtos*: No campo de imagem, coloque APENAS a URL da imagem. Colocar a imagem no Google Drive ou em qualquer outra nuvem pra usar o link pode ser uma otima ideia.
+- *Errou algum dado?*: O banco de dados vai ser checado frequentemente. Os produtos que contiverem conteudos pornograficos ou de alguma forma criminosos, alem dos que nao tem imagem ou qualquer coisa que deixe o card poluido, serão apagados.
+- 
+*Fique livre para cadastrar seus produtos ficticios.* 😎❤️
+
