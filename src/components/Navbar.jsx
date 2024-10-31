@@ -8,9 +8,11 @@ import { useNavigate } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BsDisplay } from 'react-icons/bs';
 import { CgProfile } from "react-icons/cg";
+import { useAuth } from '../context/AuthContext';
 export default function Navbar() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [showOptions, setShowOptions] = useState(false)
+    const {user, logout} = useAuth()
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -27,6 +29,13 @@ export default function Navbar() {
     const handleOptions = () => {
         setShowOptions(!showOptions);
 
+    }
+    const handleLog = ()=>{
+        if (user){
+            logout()
+        } else (
+            navigate('/login')
+        )
     }
     return (
         <nav className={styles.NavbarContainer}>
@@ -103,7 +112,9 @@ export default function Navbar() {
             </ul>
             {windowWidth > 750 ? (
                 <div className={styles.containerBag}>
-                    <button className={styles.bagIcon}><CgProfile /></button>
+                    <button onClick={handleLog} className={styles.bagIcon}>{user === null ? (<CgProfile />):(
+                        <img src={user.photoURL}/>
+                    )}</button>
                     <button onClick={goToControlPanel} className={styles.SignInBtn}><MdAddBusiness /></button>
                 </div>
             ) : ''}

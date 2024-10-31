@@ -11,27 +11,36 @@ import Footer from './components/Footer';
 import ControlPanel from './pages/ControlPanel';
 import Done from './pages/Done';
 import ScrollToTop from './tools/ScrollToTop';
+import LoginPage from './pages/LoginPage';
+
+import { AuthProvider } from './context/AuthContext';
+
 
 function App() {
+  
   return (
-    <>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/product' element={<Navigate to="/" />} /> 
-          <Route path='/diverse' element={<Diverse />} />
-          <Route path='/electronics' element={<Electronics />} />
-          <Route path='/furniture' element={<Furniture />} />
-          <Route path='/clothes' element={<Clothes />} />
-          <Route path='/control-panel' element={<ControlPanel />} />
-          <Route path='/control-panel/done' element={<Done />} />
-          <Route path='/product/:id' element={<Product />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <AuthProvider>
+      <div className='App'>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/product' element={<Navigate to="/" />} />
+            <Route path='/diverse' element={<Diverse />} />
+            <Route path='/electronics' element={<Electronics />} />
+            <Route path='/furniture' element={<Furniture />} />
+            <Route path='/clothes' element={<Clothes />} />
+            <Route path='/control-panel' element={<ControlPanel />} />
+            <Route path='/control-panel/done' element={<Done />} />
+            <Route path='/product/:id' element={<Product />} />
+            <Route path='/login' element={<LoginPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+
+      </div>
+    </AuthProvider>
   );
 }
 

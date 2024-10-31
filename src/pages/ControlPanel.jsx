@@ -77,10 +77,8 @@ export default function ControlPanel() {
                             </div>
                         </div>
                         <button type='submit'>Cadastrar</button>
-
                     </form>
                 }
-
             </div>
         </div>
     )
