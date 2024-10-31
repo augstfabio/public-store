@@ -1,0 +1,88 @@
+.container {
+
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentContainer {
+    margin-top: 4em;
+    width: 100%;
+    gap: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image,
+.texts,
+.btn,
+.description, .info, .texts h1, .texts p{
+    margin: 0;
+}
+.image {
+    border: solid 1px #272727 ;
+    border-radius: 10px;
+}
+.image img {
+    width: 30em;
+    height: 40em;
+
+    margin: 10px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    height: 40em;
+    margin: 0;
+    padding: 0;
+    
+}
+.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    
+    
+}
+.texts h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.texts p{
+    margin: 1em 0;
+    font-size: 30px;
+    color:#2c2c2c;
+}
+.btn button{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1em 1em;
+    border: none;
+    background-color: #e05504;
+    color: #fffefe;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: .3s ease-in;
+    border: solid 1px transparent;
+}
+.btn button:hover {
+     color:#e05504;
+    background-color: #fffefe;
+    border: solid #e05504 1px;
+}
+.description {
+    margin-top: 2em;
+    min-width: 22em;
+    min-height: 20em;
+}
+.loadingAnimation{
+    margin: 0;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

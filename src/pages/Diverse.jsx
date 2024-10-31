@@ -14,7 +14,7 @@ export default function Diverse() {
         loading ? (<div className={styles.loadingAnimation}><Loading /></div>) :
           <div className={styles.productsContainer}>
             {data.filter((prod) => prod.category == 'diverse').map((product) => (
-              <div key={product.id} className={styles.product}><Card img={product.imgURL} title={product.name} price={product.price} category={product.category} /></div>
+              <div key={product.id} className={styles.product}><Card product={product}/></div>
             ))}
           </div>
       }

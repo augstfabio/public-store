@@ -12,7 +12,7 @@ export default function Electronics() {
       {loading ? (<div className={styles.loadingAnimation}><Loading /></div>) :
         <div className={styles.productsContainer}>
           {data.filter((prod) => prod.category == 'eletronics').map((product) => (
-            <div key={product.id} className={styles.product}><Card img={product.imgURL} title={product.name} price={product.price} /></div>
+            <div key={product.id} className={styles.product}><Card product={product}/></div>
           ))}
         </div>
       }

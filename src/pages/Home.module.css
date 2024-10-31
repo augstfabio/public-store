@@ -10,8 +10,9 @@
 }
 
 .texts h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 800;
+
 }
 
 .texts p {
@@ -90,7 +91,7 @@
 
 .explore h2 {
     margin-top: 1em;
-    font-size: 30px;
+    font-size: 1.7em;
 
     width: 300px;
 }

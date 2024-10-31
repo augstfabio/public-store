@@ -5,6 +5,7 @@ import { collection, addDoc } from 'firebase/firestore'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../components/Loading'
+import Product from './Product'
 export default function ControlPanel() {
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
@@ -22,7 +23,7 @@ export default function ControlPanel() {
                 price,
                 category,
                 imgURL,
-                description
+                description,
             })
             setName('')
             setPrice(0)

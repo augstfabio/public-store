@@ -44,10 +44,7 @@ export default function Home() {
                     {data && data.slice(0, 10).map((prod) => ( // Limita para os primeiros 10 produtos
                         <div key={prod.id} className={styles.cardProducts}>
                             <Card
-                                img={prod.imgURL}
-                                title={prod.name}
-                                price={prod.price}
-                                category={prod.category}
+                                product={prod}
                             />
                         </div>
                     ))}
@@ -137,13 +134,10 @@ export default function Home() {
                     <button onClick={handleCreateNewProduct} className={styles.newProd}>
                         <IoMdAdd />
                     </button>
-                    {data.filter(prod => prod.category === 'diverse').slice(0, 5).map((product) => ( // Limita para os primeiros 5 produtos
+                    {data.filter(prod => prod.category === 'diverse').slice(0, 5).map((product) => (
                         <div key={product.id} className={styles.product}>
                             <Card
-                                img={product.imgURL}
-                                title={product.name}
-                                price={product.price}
-                                category={product.category}
+                                product={product}
                             />
                         </div>
                     ))}
