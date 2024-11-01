@@ -5,16 +5,18 @@ import googleIcon from '../assets/google-icon.png'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 export default function LoginPage() {
-    const {user, login, logout} = useAuth()
+    const {user, login, logout, loading} = useAuth()
     const navigate = useNavigate()
     useEffect(()=>{
-        if (user != null){
+        if (user != null && !loading){
             navigate('/')
         }
     }, [user])
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault()
-        login()
+     
+        await login()
+        
     }
     return (
         <div onSubmit={handleSubmit} className={styles.loginPage}>

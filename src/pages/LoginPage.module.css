@@ -47,7 +47,7 @@
 }
 .link a{
     text-decoration: none;
-    color: #0210d6;
+    color:#1558b8; 
     font-size: 12px;
     font-weight: 600;
 }
@@ -77,8 +77,9 @@
     width: 100%;
     height: 4em;
     background-color: transparent;
-    font-weight: 600;
-    border: solid 1px #3b3a3a;
+    font-weight: 500;
+    border: solid 1px #dadce0;
+    color: #757575; 
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -96,7 +97,7 @@
 
 }
 .loginGoogle :hover{
-    background-color:#c5c5c5;
-    border: transparent;
+    background-color: #f7f8f8;
+    border-color: #c6c8cb;
     color: #3b3a3a;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './ControlPanel.module.css'
 import { db } from '../firebase/firebase'
 import { collection, addDoc } from 'firebase/firestore'
@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../components/Loading'
 import Product from './Product'
+import { useAuth } from '../context/AuthContext'
 export default function ControlPanel() {
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
@@ -14,6 +15,14 @@ export default function ControlPanel() {
     const [description, setDescription] = useState('')
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
+    const {user} = useAuth()
+
+    useEffect(()=>{
+        if (user === null){
+            navigate('/login')
+        }
+    },[user])
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {

@@ -36,11 +36,11 @@ li {
 }
 
 .contact {
-    margin: 0;
+    margin:  0;
 }
 
 .contact p {
-    font-size: 15px;
+    font-size: 12px;
     width: 25em;
     margin: 1.5em 0;
 }
@@ -56,7 +56,7 @@ li {
 .social span {
     padding: 10px 13px;
     cursor: pointer;
-    margin: 20px;
+    margin:  0 20px;
     font-size: 20px;
     border-radius: 60px;
     border: solid 1px #b1b0b0;
@@ -71,7 +71,6 @@ li {
 }
 
 .links {
-
     margin: 0;
     display: flex;
     text-align: start;
@@ -80,7 +79,7 @@ li {
 
 .links ul {
     list-style: none;
-    margin-top: 2em;
+    margin-top: .5em;
 }
 
 .links li {
@@ -88,14 +87,16 @@ li {
     margin: 1em 0;
     align-self: flex-start;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .links li:hover {
     color: #e05504;
 
 }
-
+.footer strong {
+    font-size: 13px;
+}
 @media (max-width: 890px) {
     .footer {
         display: flex;
